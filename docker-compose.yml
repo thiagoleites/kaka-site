@@ -1,21 +1,20 @@
 services:
   kaka-multimarcas:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    build: .
     container_name: kaka-multimarcas
-    restart: always
+    restart: unless-stopped
+
     networks:
       - traefik
+
     labels:
       - "traefik.enable=true"
 
       - "traefik.http.routers.kaka.rule=Host(`kakamultimarcas.com.br`) || Host(`www.kakamultimarcas.com.br`)"
       - "traefik.http.routers.kaka.entrypoints=websecure"
-      - "traefik.http.routers.kaka.tls=true"
       - "traefik.http.routers.kaka.tls.certresolver=letsencrypt"
 
-      - "traefik.http.services.kaka.loadbalancer.server.port=80"
+      - "traefik.http.services.kaka.loadbalancer.server.port=3000"
 
 networks:
   traefik:
