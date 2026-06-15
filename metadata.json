@@ -1,0 +1,6 @@
+{
+  "name": "Kaká Multimarcas",
+  "description": "Plataforma de E-commerce Multicategorias Premium - Confiança, Sofisticação e Tecnologia.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
