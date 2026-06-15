@@ -30,9 +30,17 @@ import AuthModal from './components/AuthModal';
 import PromoView from './components/PromoView';
 import BrandsView from './components/BrandsView';
 import InstitutionalView from './components/InstitutionalView';
+import { useAutoZoom } from './useAutoZoom';
 
 export default function App() {
-  // Navigation State
+
+  const zoom = useAutoZoom();
+  const zoomStyle = {
+    transform: `scale(${zoom})`,
+    transformOrigin: 'top left',
+    width: `${100 / zoom}%`
+  };
+
   const [activePage, setActivePage] = useState<string>('home');
   const [navigationParams, setNavigationParams] = useState<any>(null);
 
@@ -206,7 +214,7 @@ export default function App() {
   }, [activePage, navigationParams]);
 
   return (
-    <div className="min-h-screen bg-neutral-100 flex flex-col font-sans select-none antialiased text-neutral-900 leading-normal">
+    <div  style={zoomStyle} className="min-h-screen bg-neutral-100 flex flex-col font-sans select-none antialiased text-neutral-900 leading-normal">
       {/* 1. Global Announcement / Action Popups */}
       {toastMessage && (
         <div className={`fixed top-6 right-6 z-55 max-w-sm p-4 rounded-xl shadow-2xl border flex items-center gap-3 transition-all duration-300 transform translate-x-0 ${toastType === 'success' ? 'bg-neutral-900 text-white border-white' : 'bg-white text-neutral-800 border-neutral-250 animate-bounce'}`}>

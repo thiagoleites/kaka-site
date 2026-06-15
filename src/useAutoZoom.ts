@@ -1,27 +1,31 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react'
 
 export function useAutoZoom() {
+  const [zoom, setZoom] = useState(1)
 
-    const [zoomLevel, setZoomLevel] = useState(1);
+  useEffect(() => {
+    const updateZoom = () => {
+      const width = window.innerWidth
 
-    useEffect(() => {
-        const handleResize = () => {
-            if (window.innerWidth > 1600) {
-                setZoomLevel(1.3);
-            } else {
-                setZoomLevel(1.1);
-            }
-        }
+      if (width >= 2560) {
+        setZoom(1.5)
+      } else if (width >= 1920) {
+        setZoom(1.3)
+      } else if (width >= 1366) {
+        setZoom(1)
+      } else {
+        setZoom(1)
+      }
+    }
 
-        window.addEventListener('resize', handleResize);
+    updateZoom()
 
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
+    window.addEventListener('resize', updateZoom)
 
-    }, []);
+    return () => {
+      window.removeEventListener('resize', updateZoom)
+    }
+  }, [])
 
-
-    return zoomLevel;
-
+  return zoom
 }
