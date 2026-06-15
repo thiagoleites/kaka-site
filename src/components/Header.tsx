@@ -516,7 +516,7 @@ export default function Header({
           </div>
 
           <div className="hidden lg:flex items-center gap-3 flex-shrink-0">
-            <span className="text-xs text-neutral-400 font-mono">Suporte WhatsApp: <strong>(11) 98765-4321</strong></span>
+            <span className="text-xs text-neutral-400 font-mono">Suporte WhatsApp: <strong>(82) 99682-8405</strong></span>
           </div>
         </div>
       </nav>
