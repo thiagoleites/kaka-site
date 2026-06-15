@@ -26,6 +26,7 @@ import {
 } from 'lucide-react';
 import { Product, CartItem, User, Coupon } from '../types';
 import { DEPARTMENTS, SAMPLE_COUPONS } from '../data';
+import Logo from '../../assets/images/logo.png';
 
 interface HeaderProps {
   cart: CartItem[];
@@ -171,7 +172,7 @@ export default function Header({
           <span className="text-[10px] text-neutral-400 font-medium tracking-[0.25em] uppercase text-center mt-0.5">
             Multimarcas
           </span> */}
-          <img src="/assets/images/logo.png" alt="Kaká Multimarcas" className="w-28 h-auto object-contain" />
+          <img src={Logo} alt="Kaká Multimarcas" className="w-28 h-auto object-contain" />
         </div>
 
         {/* Intellisearch Bar */}
