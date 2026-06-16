@@ -3,7 +3,7 @@
 ![Kaká Multimarcas](assets/images/logo.png)
 
 ## Overview
-Bem-vindo ao projeto **`site`**, o frontend do e-commerce **Kaká Multimarcas**.
+Bem-vindo ao projeto **`KAKAMULTIMARCAS`**, o frontend do e-commerce **Kaká Multimarcas**.
 Ele foi desenvolvido como um protótipo visual e funcional para demonstrar:
 - catálogo de produtos,
 - página de produto,
