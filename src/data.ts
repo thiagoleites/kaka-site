@@ -56,7 +56,7 @@ export const SAMPLE_COUPONS: Coupon[] = [
 ];
 
 export const INITIAL_USER: User = {
-  fullName: 'José Ricardo',
+  fullName: 'João Ricardo',
   email: 'kaka@kakamultimarcas.com.br',
   cpf: '123.456.789-00',
   phone: '(11) 99876-5432',
@@ -65,7 +65,7 @@ export const INITIAL_USER: User = {
   savedAddresses: [
     {
       id: 'addr1',
-      fullName: 'José Ricardo',
+      fullName: 'João Ricardo',
       street: 'Avenida Paulista',
       number: '1000',
       complement: 'Apto 152B',
@@ -77,7 +77,7 @@ export const INITIAL_USER: User = {
     },
     {
       id: 'addr2',
-      fullName: 'José Ricardo - Filial',
+      fullName: 'João Ricardo - Filial',
       street: 'Rua das Flores',
       number: '48',
       neighborhood: 'Jardins',
@@ -92,14 +92,14 @@ export const INITIAL_USER: User = {
       id: 'card1',
       brand: 'visa',
       lastFour: '4242',
-      holderName: 'JOSÉ RICARDO',
+      holderName: 'JOÃO RICARDO',
       expiry: '12/29'
     },
     {
       id: 'card2',
       brand: 'mastercard',
       lastFour: '8811',
-      holderName: 'JOSÉ RICARDO',
+      holderName: 'JOÃO RICARDO',
       expiry: '08/32'
     }
   ]
