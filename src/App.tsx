@@ -15,7 +15,7 @@ import {
   AlertCircle
 } from 'lucide-react';
 import { Product, CartItem, User, Order } from './types';
-import { ALL_PRODUCTS, INITIAL_USER } from './data';
+import { ALL_PRODUCTS } from './data';
 
 // Import all subviews
 import Header from './components/Header';
@@ -59,7 +59,7 @@ export default function App() {
   // Logged User State
   const [currentUser, setCurrentUser] = useState<User | null>(() => {
     const saved = localStorage.getItem('kaka_user');
-    return saved ? JSON.parse(saved) : INITIAL_USER; // Default VIP user logged in for a richer demo initially
+    return saved ? JSON.parse(saved) : null;
   });
 
   // Orders History State
